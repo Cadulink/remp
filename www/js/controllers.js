@@ -1,6 +1,8 @@
 angular.module('app.controllers', [])
 
-.controller('remplacementCtrl', function($scope) {
+.controller('remplacementCtrl', function($scope,$state){
+
+    
 
 })
 

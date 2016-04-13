@@ -46,7 +46,7 @@ angular.module('app.routes', [])
     url: '/page4',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/medecin.html',
+        templateUrl: 'templates/remplacement/medecin.html',
       }
     }
   })
@@ -55,7 +55,7 @@ angular.module('app.routes', [])
     url: '/page5',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/cardiologue.html',
+        templateUrl: 'templates/remplacement/cardiologue.html',
       }
     }
   })
@@ -64,7 +64,7 @@ angular.module('app.routes', [])
     url: '/page6',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/dentiste.html',
+        templateUrl: 'templates/remplacement/dentiste.html',
       }
     }
   })
@@ -73,7 +73,7 @@ angular.module('app.routes', [])
     url: '/page7',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/infirmier.html',
+        templateUrl: 'templates/remplacement/infirmier.html',
       }
     }
   })
@@ -82,7 +82,7 @@ angular.module('app.routes', [])
     url: '/page8',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/kinesitherapeute.html',
+        templateUrl: 'templates/remplacement/kinesitherapeute.html',
       }
     }
   })
@@ -91,7 +91,7 @@ angular.module('app.routes', [])
     url: '/page9',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/liberal.html',
+        templateUrl: 'templates/remplacement/liberal.html',
       }
     }
   })
@@ -102,8 +102,5 @@ angular.module('app.routes', [])
     controller: 'homeCtrl'
   })
 
-  $urlRouterProvider.otherwise('/root')
 
-
-
-});
+  $urlRouterProvider.otherwise('/root') })
