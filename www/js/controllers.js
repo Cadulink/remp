@@ -1,8 +1,6 @@
 angular.module('app.controllers', [])
 
-.controller('remplacementCtrl', function($scope,$state){
-
-    
+.controller('remplacementCtrl', function($scope){
 
 })
 
@@ -19,5 +17,10 @@ angular.module('app.controllers', [])
 })
 
 .controller('homeCtrl', function($scope) {
+
+})
+
+
+.controller('medecinCtrl', function($scope,$state) {
 
 })

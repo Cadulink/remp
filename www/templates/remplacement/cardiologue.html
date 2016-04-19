@@ -46,5 +46,17 @@
         </div>
         <div class="item item-divider">Longwy (54) </div>
       </div>
+      <div class="buttons">
+        Supprimer son annonce
+        <button class="button button-icon icon ion-minus" ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+      </div>
+      <div class="buttons">
+        Trier les annonces
+        <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder">Reorder</button>
+        Ajouter une annonce
+        <button class="button button-icon icon ion-plus" ng-click="openModal()"></button>
+      </div>
+
+
     </ion-content>
   </ion-view>
