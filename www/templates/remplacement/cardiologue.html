@@ -46,17 +46,23 @@
         </div>
         <div class="item item-divider">Longwy (54) </div>
       </div>
-      <div class="buttons">
-        Supprimer son annonce
-        <button class="button button-icon icon ion-minus" ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
-      </div>
-      <div class="buttons">
-        Trier les annonces
-        <button class="button" ng-click="data.showDelete = false; data.showReorder = !data.showReorder">Reorder</button>
-        Ajouter une annonce
-        <button class="button button-icon icon ion-plus" ng-click="openModal()"></button>
-      </div>
+      <div ng-controller='myCtrl'>
+        <div ng-repeat='article in articles'>
+        <p>{{article.title}} </p><br>
+        <p>{{article.content}}  </p>
+        <p>{{article.by}}  </p><br>
+        </div>
 
+        <form name="articleForm" ng-submit="addArticle();">
+          <label>Titre de l'annonce</label>
+          <input ng-model="form.title" type="text" required>
+        <label> Description </label></br>
+        <textarea ng-model="form.content" required></textarea></br>
+        <label>Author </label></br>
+        <input ng-model="form.by" type="text" required ></br>
+        <input type="submit" value="Ajouter Article">
+      </form>
+        </div>
 
     </ion-content>
   </ion-view>

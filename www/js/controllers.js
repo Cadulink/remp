@@ -24,3 +24,26 @@ angular.module('app.controllers', [])
 .controller('medecinCtrl', function($scope,$state) {
 
 })
+
+.controller('myCtrl' ,['$scope',function($scope){
+
+$scope.form = {} ;
+
+$scope.addArticle = function(){
+    $scope.articles.push($scope.form);
+    $scope.form = {};
+}
+ $scope.articles = [
+    {
+      title: "Recherche un champion",
+      content :' Annonce,Annonce,Annonce,Annonce,Annonce,Annonce',
+      by: 'Quentin le king'
+    },
+   {
+     title: "Recherche un champion",
+     content :'Second comment',
+     by : 'Daniel le Bg'
+   }
+ ];
+
+}]);
