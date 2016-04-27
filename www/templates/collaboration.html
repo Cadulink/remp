@@ -1,7 +1,26 @@
 <ion-view style="" id="page3" title="Collaboration">
-    <ion-content class="has-header" padding="true">
-      <p>
-        Collaboration
-      </p>
-    </ion-content>
+  <ion-content class="has-header" padding="true">
+    <p>
+      Collaboration
+    </p>
+    <p ng-controller="collaborationCtrl">
+      Proposer sa collaboration : Métier / departement / spécialisation .
+    </p>
+    <img src="img/cadulink.jpeg" style="width: 80%" class="col-offset-10">
+    <form>
+      <label class="item item-input">
+        <span class="input-label">Métier :</span>
+        <input type="text" placeholder="" ng-model="user.job">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Département :</span>
+        <input type="text" placeholder="" ng-model="user.department">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Spécialisation :</span>
+        <input type="text" placeholder="" ng-model="user.specification">
+      </label>
+      <button class="button button-stable button-block button-positive" type="submit" ng-click="save(user)">Connexion</button>
+    </form>
+  </ion-content>
 </ion-view>

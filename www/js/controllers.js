@@ -25,15 +25,15 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('myCtrl' ,['$scope',function($scope){
+.controller('commentCtrl' ,['$scope',function($scope){
 
 $scope.form = {} ;
 
-$scope.addArticle = function(){
-    $scope.articles.push($scope.form);
+$scope.addComment = function(){
+    $scope.comments.push($scope.form);
     $scope.form = {};
 }
- $scope.articles = [
+ $scope.comments = [
     {
       title: "Recherche un champion",
       content :' Annonce,Annonce,Annonce,Annonce,Annonce,Annonce',
@@ -45,5 +45,26 @@ $scope.addArticle = function(){
      by : 'Daniel le Bg'
    }
  ];
+}])
 
-}]);
+.controller('annonceCtrl', function($scope,$state) {
+$scope.annonces = [
+  {
+  title : "MEDECIN CARDIOLOGUE H/F",
+  content : "Remplacement du vendredi 29 avril (17h) jusqu'au lundi 2 mai (8h) Rémunération  sur la totalité du remplacement 1500 € net Logé sur place Frais de déplacement rembo...",
+  department : "Bourgogne 24"
+  },
+  {
+    title : "aller les bleus",
+    content :"testetstestetstets",
+    department :"NPDC 59 "
+  }
+];
+});
+
+// .controller('collaborationCtrl'), function($scope,$state) {
+//
+//   $scope.collaboration = {}
+//
+//
+//   } ;

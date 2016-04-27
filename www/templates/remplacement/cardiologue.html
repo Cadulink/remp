@@ -1,8 +1,8 @@
-<ion-view style="" id="page5" title="Cardiologue">
+<ion-view  id="page5" title="Cardiologue">
   <ion-content class="has-header" padding="true">
     <form style="" class="list"></form>
     <div style="" class="list card">
-      <div class="item item-divider">Communauté Dentiste</div>
+      <div class="item item-divider">Communauté Cardiologue</div>
       <div class="item item-body">
         <div style="text-align: center;">
           <img src="img/cardiologue.png"  height="auto" width="50%">
@@ -13,7 +13,7 @@
     <div style=" font-size: 15px; text-align: center;" >
       <p>Découvrez ci-dessous les différentes offres de remplacement concernant les Cardiologues.</p>
     </div>
-    <div style="" class="list card">
+    <div style=""  class="list card">
       <div class="item item-divider"> Remplacement cardiologue — H/F</div>
       <div class="item item-body">
         <div style=" text-align: center;" >
@@ -28,39 +28,38 @@
       <div style="" class="list card">
         <div class="item item-divider">MÉDECIN CARDIOLOGUE - H/F</div>
         <div class="item item-body">
-          <div style=" text-align: center;" >
+          <div ng-controller="annonceCtrl" style=" text-align: center;" >
             <img src="img/saint-ouen.png" alt="" />
             <p>Nous recherchons pour le compte de notre client...Etablissement situé dans les Alpes du Sud Remplacement en garde de 24 heures...</p>
           </div>
         </div>
-        <div class="item item-divider">Gap (05) </div>
+        <div  class="item item-divider">Gap (05) </div>
       </div>
       <div style="" class="list card">
-        <div class="item item-divider">MEDECIN CARDIOLOGUE H/F</div>
+        <div ng-controller="annonceCtrl" class="item item-divider">{{annonces[0].title}}</div>
         <div class="item item-body">
-          <div style=" text-align: center;" >
+          <div ng-controller="annonceCtrl" style=" text-align: center;" >
             <img src="img/fonsegrive.png" width="100%" alt="" />
-            <p>Remplacement du vendredi 29 avril (17h) jusqu'au lundi 2 mai (8h)
-               Rémunération  sur la totalité du remplacement 1500 € net Logé sur place Frais de déplacement rembo...</p>
+            <p>{{annonces[0].content}}</p>
           </div>
         </div>
-        <div class="item item-divider">Longwy (54) </div>
+        <div ng-controller="annonceCtrl" class="item item-divider"> {{annonces[0].department}} </div>
       </div>
-      <div ng-controller='myCtrl'>
-        <div ng-repeat='article in articles'>
-        <p>{{article.title}} </p><br>
-        <p>{{article.content}}  </p>
-        <p>{{article.by}}  </p><br>
+      <div ng-controller='commentCtrl'>
+        <div ng-repeat='comment in comments'>
+        <p>{{comment.title}} </p><br>
+        <p>{{comment.content}}  </p>
+        <p>{{comment.by}}  </p><br>
         </div>
 
-        <form name="articleForm" ng-submit="addArticle();">
+        <form name="commentsForm" ng-submit="addComment();">
           <label>Titre de l'annonce</label>
           <input ng-model="form.title" type="text" required>
         <label> Description </label></br>
         <textarea ng-model="form.content" required></textarea></br>
         <label>Author </label></br>
         <input ng-model="form.by" type="text" required ></br>
-        <input type="submit" value="Ajouter Article">
+        <input type="submit" value="Ajouter Commentaire">
       </form>
         </div>
 
