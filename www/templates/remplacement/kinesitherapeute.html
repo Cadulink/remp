@@ -1,8 +1,16 @@
 <ion-view style="" id="page8" title="Kinesitherapeute">
   <ion-content class="has-header" padding="true">
+  <button class="button button-positive"  ng-click="openModal()">Ajouter une annonce</button>
+    <ion-list>
+      <ion-item ng-repeat="announcement in annoucements">
+        <p>{{announcement.title}}        </p><br>
+        <p>{{announcement.description}}  </p>
+        <p>{{announcement.region}}       </p><br>
+      </ion-item>
+    </ion-list>
     <form style="" class="list"></form>
     <div style="" class="list card">
-      <div class="item item-divider">Communauté Kinésithérapie</div>
+      <div class="item item-divider item-positive">Communauté Kinésithérapie</div>
       <div class="item item-body">
         <div style="text-align: center;">
           <img src="img/kinesitherapie.jpeg"  height="auto" width="50%">
@@ -14,17 +22,17 @@
       <p>Découvrez ci-dessous les différentes offres de remplacement concernant les Kinésithérapeute.</p>
     </div>
     <div style="" class="list card">
-      <div class="item item-divider">Cherche remplacant Taverny </div>
+      <div class="item item-divider item-positive">Cherche remplacant Taverny </div>
       <div class="item item-body">
         <div style=" text-align: center;" >
           <img src="img/meudon.png" height="auto" width="100%"/>
           <p>Cabinet de groupe, Taverny, Val d'Oise, petite ville tranquille à 20 minutes de Paris par l'A15;cherche remplaçant(e) du 17/05 au 27/05, et du 04/07 au 19/08 . Cabinet, domiciles, maisons de retraite....</p>
         </div>
       </div>
-      <div class="item item-divider">Taverny (95)</div>
+      <div class="item item-divider item-positive">Taverny (95)</div>
     </div>
     <div style="" class="list card">
-      <div class="item item-divider">Remplacement conge maternite Aout à Décembre 2016 </div>
+      <div class="item item-divider item-positive">Remplacement conge maternite Aout à Décembre 2016 </div>
       <div class="item item-body">
         <div style=" text-align: center;" >
           <img src="img/saint-ouen.png" alt="" />
@@ -33,10 +41,10 @@
           </div>
         </div>
 
-        <div class="item item-divider">Villemomble (93)</div>
+        <div class="item item-divider item-positive">Villemomble (93)</div>
       </div>
       <div style="" class="list card">
-        <div class="item item-divider">AIX en Provence Rempla aout 2016 </div>
+        <div class="item item-divider item-positive">AIX en Provence Rempla aout 2016 </div>
         <div class="item item-body">
           <div style=" text-align: center;" >
             <img src="img/fonsegrive.png" width="100%" alt="" />
@@ -44,7 +52,7 @@
               (secteur nord). Temps de déplacement très courts et parking facile chez chacun des patients....</p>
             </div>
           </div>
-          <div class="item item-divider">Aix en provence (13)</div>
+          <div class="item item-divider item-positive">Aix en provence (13)</div>
         </div>
       </ion-content>
     </ion-view>

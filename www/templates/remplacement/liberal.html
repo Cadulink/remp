@@ -1,8 +1,16 @@
 <ion-view style="" id="page9" title="Libéral">
   <ion-content class="has-header" padding="true">
+  <button class="button button-positive"  ng-click="openModal()">Ajouter une annonce</button>
+    <ion-list>
+      <ion-item ng-repeat="announcement in annoucements">
+        <p>{{announcement.title}}        </p><br>
+        <p>{{announcement.description}}  </p>
+        <p>{{announcement.region}}       </p><br>
+      </ion-item>
+    </ion-list>
     <form style="" class="list"></form>
     <div style="" class="list card">
-      <div class="item item-divider">Communauté Médecin</div>
+      <div class="item item-divider item-positive">Communauté Médecin</div>
       <div class="item item-body">
         <div style="text-align: center;">
           <img src="img/libéral.jpeg"  height="auto" width="50%">
@@ -14,7 +22,7 @@
       <p>Découvrez ci-dessous les différentes offres de remplacement concernant les Infirmiers Libéraux.</p>
     </div>
     <div style="" class="list card">
-      <div class="item item-divider">Marseille Ch remplacements</div>
+      <div class="item item-divider item-positive">Marseille Ch remplacements</div>
       <div class="item item-body">
         <div style=" text-align: center;" >
           <img src="img/meudon.png" height="auto" width="100%"/>
@@ -22,10 +30,10 @@
             Je suis actuelement en Cdi en structure hospitalière mais j'ai effectuer mes démarches auprès de la sécurité sociale j'ai reçu leur...</p>
           </div>
         </div>
-        <div class="item item-divider">Provence-Alpes-Côte d'Azur (18)</div>
+        <div class="item item-divider item-positive">Provence-Alpes-Côte d'Azur (18)</div>
       </div>
       <div style="" class="list card">
-        <div class="item item-divider">Metz Ch remplacements</div>
+        <div class="item item-divider item-positive">Metz Ch remplacements</div>
         <div class="item item-body">
           <div style=" text-align: center;" >
             <img src="img/saint-ouen.png" alt="" />
@@ -33,10 +41,10 @@
               Actuellement remplaçante dans un cabinet...</p>
             </div>
           </div>
-          <div class="item item-divider">Lorraine (54)</div>
+          <div class="item item-divider item-positive">Lorraine (54)</div>
         </div>
         <div style="" class="list card">
-          <div class="item item-divider">Lille Ch remplaçant(e) dispo</div>
+          <div class="item item-divider item-positive">Lille Ch remplaçant(e) dispo</div>
           <div class="item item-body">
             <div style=" text-align: center;" >
               <img src="img/fonsegrive.png" width="100%" alt="" />
@@ -45,7 +53,7 @@
                 Soins variés et nursing sim...</p>
               </div>
             </div>
-            <div class="item item-divider">Nord-Pas-de-Calais (59)</div>
+            <div class="item item-divider item-positive">Nord-Pas-de-Calais (59)</div>
           </div>
         </ion-content>
       </ion-view>

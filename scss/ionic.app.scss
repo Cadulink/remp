@@ -22,7 +22,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 
-.meudon {
+.top {
+  color:blue;
+}
 
-  width: 50%;
+
+.spacing {
+  margin-top: 50px ;
 }

@@ -1,8 +1,16 @@
 <ion-view style="" id="page6" title="Dentiste">
   <ion-content class="has-header" padding="true">
+  <button class="button button-positive"  ng-click="openModal()">Ajouter une annonce</button>
+    <ion-list>
+      <ion-item ng-repeat="announcement in annoucements">
+        <p>{{announcement.title}}        </p><br>
+        <p>{{announcement.description}}  </p>
+        <p>{{announcement.region}}       </p><br>
+      </ion-item>
+    </ion-list>
     <form style="" class="list"></form>
     <div style="" class="list card">
-      <div class="item item-divider">Communauté Dentiste</div>
+      <div class="item item-divider item-positive">Communauté Dentiste</div>
       <div class="item item-body">
         <div style="text-align: center;">
           <img src="img/dentiste.jpeg"  height="auto" width="50%">
@@ -14,7 +22,7 @@
       <p>Découvrez ci-dessous les différentes offres de remplacement concernant les Dentistes.</p>
     </div>
     <div style="" class="list card">
-      <div class="item item-divider"> Remplacement (Gard)</div>
+      <div class="item item-divider item-positive"> Remplacement (Gard)</div>
       <div class="item item-body">
         <div style=" text-align: center;" >
           <img src="img/meudon.png" height="auto" width="100%"/>
@@ -22,27 +30,27 @@
             en omnipratique dans la région du Gard, à partir du mois de Juillet...</p>
         </div>
       </div>
-      <div class="item item-divider">Gard (30)</div>
+      <div class="item item-divider item-positive">Gard (30)</div>
     </div>
     <div style="" class="list card">
-      <div class="item item-divider">Remplacement pyrénées orientales (Perpignan)</div>
+      <div class="item item-divider item-positive">Remplacement pyrénées orientales (Perpignan)</div>
       <div class="item item-body">
         <div style=" text-align: center;" >
           <img src="img/saint-ouen.png" alt="" />
           <p>Cherche remplaçant mois de juin 2016 3 à 5 jours par semaine...</p>
           </div>
         </div>
-        <div class="item item-divider">Perpignan (66)</div>
+        <div class="item item-divider item-positive">Perpignan (66)</div>
       </div>
       <div style="" class="list card">
-        <div class="item item-divider"> Recherche assistante dentaire qualifiée (Libourne)</div>
+        <div class="item item-divider item-positive"> Recherche assistante dentaire qualifiée (Libourne)</div>
         <div class="item item-body">
           <div style=" text-align: center;" >
             <img src="img/fonsegrive.png" width="100%" alt="" />
             <p>Recherche une assistante dentaire qualifiée pour contrat de remplacement congé de maternité à 35 h...</p>
             </div>
           </div>
-          <div class="item item-divider">Libourne (33)</div>
+          <div class="item item-divider item-positive">Libourne (33)</div>
         </div>
       </ion-content>
     </ion-view>

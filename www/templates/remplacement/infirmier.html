@@ -1,8 +1,16 @@
 <ion-view style="" id="page7" title="Infirmier">
   <ion-content class="has-header" padding="true">
+  <button class="button button-positive"  ng-click="openModal()">Ajouter une annonce</button>
+    <ion-list>
+      <ion-item ng-repeat="announcement in annoucements">
+        <p>{{announcement.title}}        </p><br>
+        <p>{{announcement.description}}  </p>
+        <p>{{announcement.region}}       </p><br>
+      </ion-item>
+    </ion-list>
     <form style="" class="list"></form>
     <div style="" class="list card">
-      <div class="item item-divider">Communauté d'Infimier</div>
+      <div class="item item-divider item-positive">Communauté d'Infimier</div>
       <div class="item item-body">
         <div style="text-align: center;">
           <img src="img/infirmiere.png"  height="auto" width="50%">
@@ -14,7 +22,7 @@
       <p>Découvrez ci-dessous les différentes offres de remplacement concernant les Infirmiers.</p>
     </div>
     <div style="" class="list card">
-      <div class="item item-divider">Cherche remplacant Valenciennes </div>
+      <div class="item item-divider item-positive">Cherche remplacant Valenciennes </div>
       <div class="item item-body">
         <div style=" text-align: center;" >
           <img src="img/meudon.png" height="auto" width="100%"/>
@@ -22,10 +30,10 @@
             Tournée agréable et soins variés.....</p>
           </div>
         </div>
-        <div class="item item-divider">Taverny (95)</div>
+        <div class="item item-divider item-positive">Taverny (95)</div>
       </div>
       <div style="" class="list card">
-        <div class="item item-divider">Cherche remplacant sur Chalon sur Saone </div>
+        <div class="item item-divider item-positive">Cherche remplacant sur Chalon sur Saone </div>
         <div class="item item-body">
           <div style=" text-align: center;" >
             <img src="img/saint-ouen.png" alt="" />
@@ -33,7 +41,7 @@
               remplaçant IDE libéral pour quelques jours en juillet -aout et octobre 2016. Tournée très agreable ...</p>
             </div>
           </div>
-          <div class="item item-divider">Chalon-sur-Saone (71)</div>
+          <div class="item item-divider item-positive">Chalon-sur-Saone (71)</div>
         </div>
         </ion-content>
       </ion-view>

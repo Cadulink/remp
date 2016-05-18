@@ -18,7 +18,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.collaboration', {
-    url: '/page2',
+    url: '/collaboration',
     views: {
       'side-menu21': {
         templateUrl: 'templates/collaboration.html',
@@ -27,8 +27,27 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.pharmacien',{
+    url : "/rem_pharmacien",
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/remplacement/pharmacien.html',
+      }
+       }
+  })
+
+  .state('emploi', {
+    url :'/emploi',
+    templateUrl :"templates/emploi.html",
+  })
+
+  .state('installation', {
+    url : '/installation',
+    templateUrl : "templates/installation.html",
+  })
+
   .state('menu.patient', {
-    url: '/page3',
+    url: '/patient',
     views: {
       'side-menu21': {
         templateUrl: 'templates/patient.html',
@@ -37,13 +56,13 @@ angular.module('app.routes', [])
   })
 
   .state('menu', {
-    url: '/side-menu21',
+    url: '/side-menu',
     templateUrl: 'templates/menu.html',
     abstract:true
   })
 
   .state('menu.medecin', {
-    url: '/page4',
+    url: '/rem-medecin',
     views: {
       'side-menu21': {
         templateUrl: 'templates/remplacement/medecin.html',
@@ -53,7 +72,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.cardiologue', {
-    url: '/page5',
+    url: '/rem-cardiologue',
     views: {
       'side-menu21': {
         templateUrl: 'templates/remplacement/cardiologue.html',
@@ -62,7 +81,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.dentiste', {
-    url: '/page6',
+    url: '/rem-dentiste',
     views: {
       'side-menu21': {
         templateUrl: 'templates/remplacement/dentiste.html',
@@ -71,7 +90,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.infirmier', {
-    url: '/page7',
+    url: '/rem-infirmier',
     views: {
       'side-menu21': {
         templateUrl: 'templates/remplacement/infirmier.html',
@@ -80,7 +99,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.kinesitherapeute', {
-    url: '/page8',
+    url: '/rem-kinesitherapeute',
     views: {
       'side-menu21': {
         templateUrl: 'templates/remplacement/kinesitherapeute.html',
@@ -88,8 +107,15 @@ angular.module('app.routes', [])
     }
   })
 
+
+  .state('map', {
+    url : '/map',
+    templateUrl : "templates/map.html"
+  })
+
+  
   .state('menu.liberal', {
-    url: '/page9',
+    url: '/rem-liberal',
     views: {
       'side-menu21': {
         templateUrl: 'templates/remplacement/liberal.html',
@@ -98,10 +124,9 @@ angular.module('app.routes', [])
   })
 
   .state('home', {
-    url: '/root',
+    url: '/accueil',
     templateUrl: 'templates/home.html',
     controller: 'homeCtrl'
   })
 
-
-  $urlRouterProvider.otherwise('/root') })
+  $urlRouterProvider.otherwise('/accueil') })

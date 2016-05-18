@@ -1,20 +1,38 @@
-<ion-view  id="page5" title="Cardiologue">
-  <ion-content class="has-header" padding="true">
-    <form style="" class="list"></form>
+<ion-view  id="page5" title="Cardiologue" >
+  <ion-content  class="has-header" padding="true">
+   <button class="button button-positive"  ng-click="openModal()">Ajouter une annonce</button>
     <div style="" class="list card">
-      <div class="item item-divider">Communauté Cardiologue</div>
+      <div class="item item-divider item-positive">Communauté Cardiologue</div>
       <div class="item item-body">
         <div style="text-align: center;">
           <img src="img/cardiologue.png"  height="auto" width="50%">
         </div>
       </div>
     </div>
-    <form style="" class="list"></form>
     <div style=" font-size: 15px; text-align: center;" >
       <p>Découvrez ci-dessous les différentes offres de remplacement concernant les Cardiologues.</p>
     </div>
+    <ion-list>
+      <div class="list">
+        <div class="item range range-positive">0 km
+          <i class="icon ion-home"></i>
+          <input type="range" name="volume" min="0" max="100" value="10">
+          <i class="icon ion-map"></i>100 km
+        </div>
+      </div>
+    <div style=""  class="list card" ng-controller="annonceCtrl" ng-repeat="announcement in announcements">
+      <div class="item item-divider item-positive"> {{announcement.title}} </div>
+      <div class="item item-body">
+        <div style=" text-align: center;" >
+          <img src="img/meudon.png" height="auto" width="100%"/>
+          <p> {{announcement.description}} </p>
+          </div>
+        </div>
+        <div class="item item-divider item-positive"> {{announcement.region}} </div>
+      </div>
+      </ion-list>
     <div style=""  class="list card">
-      <div class="item item-divider"> Remplacement cardiologue — H/F</div>
+      <div class="item item-divider item-positive"> Remplacement cardiologue — H/F</div>
       <div class="item item-body">
         <div style=" text-align: center;" >
           <img src="img/meudon.png" height="auto" width="100%"/>
@@ -23,27 +41,27 @@
             Plateau technique entièrement reconstruit en 2009 Disciplines : Service d’Accueil des Urgences et SMUR, bloc opératoir...</p>
           </div>
         </div>
-        <div class="item item-divider">Bourgogne(15)</div>
+        <div class="item item-divider item-positive">Bourgogne(15)</div>
       </div>
       <div style="" class="list card">
-        <div class="item item-divider">MÉDECIN CARDIOLOGUE - H/F</div>
+        <div class="item item-divider item-positive">MÉDECIN CARDIOLOGUE - H/F</div>
         <div class="item item-body">
           <div ng-controller="annonceCtrl" style=" text-align: center;" >
             <img src="img/saint-ouen.png" alt="" />
             <p>Nous recherchons pour le compte de notre client...Etablissement situé dans les Alpes du Sud Remplacement en garde de 24 heures...</p>
           </div>
         </div>
-        <div  class="item item-divider">Gap (05) </div>
+        <div  class="item item-divider item-positive">Gap (05) </div>
       </div>
       <div style="" class="list card">
-        <div ng-controller="annonceCtrl" class="item item-divider">{{annonces[0].title}}</div>
+        <div ng-controller="annonceCtrl" class="item item-divider item-positive">{{announcements[0].title}}</div>
         <div class="item item-body">
           <div ng-controller="annonceCtrl" style=" text-align: center;" >
             <img src="img/fonsegrive.png" width="100%" alt="" />
-            <p>{{annonces[0].content}}</p>
+            <p>{{announcements[0].description}}</p>
           </div>
         </div>
-        <div ng-controller="annonceCtrl" class="item item-divider"> {{annonces[0].department}} </div>
+        <div ng-controller="annonceCtrl" class="item item-divider item-positive"> {{announcements[0].region}} </div>
       </div>
       <div ng-controller='commentCtrl'>
         <div ng-repeat='comment in comments'>
@@ -53,15 +71,14 @@
         </div>
 
         <form name="commentsForm" ng-submit="addComment();">
-          <label>Titre de l'annonce</label>
-          <input ng-model="form.title" type="text" required>
+          <label>Titre de l'annonce</label><br>
+          <input ng-model="form.title"  required><br>
         <label> Description </label></br>
-        <textarea ng-model="form.content" required></textarea></br>
+        <input ng-model="form.content" required></input></br>
         <label>Author </label></br>
-        <input ng-model="form.by" type="text" required ></br>
-        <input type="submit" value="Ajouter Commentaire">
+        <input ng-model="form.by"  required ></br>
+        <button class="button button-positive" ng-click="addComment">Ajoutez votre commentaire</button>
       </form>
         </div>
-
     </ion-content>
   </ion-view>

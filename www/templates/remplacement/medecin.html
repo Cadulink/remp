@@ -1,8 +1,16 @@
 <ion-view style="" id="page4" title="Médecin">
   <ion-content class="has-header" padding="true">
+  <button class="button button-positive"  ng-click="openModal()">Ajouter une annonce</button>
+    <ion-list>
+      <ion-item ng-repeat="announcement in annoucements">
+        <p>{{announcement.title}}        </p><br>
+        <p>{{announcement.description}}  </p>
+        <p>{{announcement.region}}       </p><br>
+      </ion-item>
+    </ion-list>
     <form style="" class="list"></form>
     <div style="" class="list card">
-      <div class="item item-divider">Communauté Médecin</div>
+      <div class="item item-divider item-positive">Communauté Médecin</div>
       <div class="item item-body">
         <div style="text-align: center;">
           <img src="img/medecin.jpeg"  height="auto" width="50%">
@@ -11,20 +19,20 @@
     </div>
     <form style="" class="list"></form>
     <div  style=" font-size: 15px; text-align: center;" >
-      <p>Découvrez ci-dessous les différentes offres de remplacement concernant les Kinésitherapeute.</p>
+      <p>Découvrez ci-dessous les différentes offres de remplacement concernant les Médecins.</p>
     </div>
     <div style="" class="list card">
-      <div class="item item-divider">Remplacement à Meudon</div>
+      <div class="item item-divider item-positive">Remplacement à Meudon</div>
       <div class="item item-body">
         <div style=" text-align: center;" >
           <img src="img/meudon.png" height="auto" width="100%"/>
           <p>Médecin généraliste installé à Meudon Cherche remplaçant (e) 1 à 2 jours par semaine à partir de septembre 2016. Possibilité de faire des remplacements avant. Étudie toutes propositions....</p>
         </div>
       </div>
-      <div class="item item-divider">Meudon (92 )</div>
+      <div class="item item-divider item-positive">Meudon (92 )</div>
     </div>
     <div style="" class="list card">
-      <div class="item item-divider">Recherche remplaçant(e) pour congés maternité</div>
+      <div class="item item-divider item-positive">Recherche remplaçant(e) pour congés maternité</div>
       <div class="item item-body">
         <div style=" text-align: center;" >
           <img src="img/saint-ouen.png" alt="" />
@@ -34,10 +42,10 @@
           </div>
         </div>
 
-        <div class="item item-divider">Val-d'Oise - Saint-Ouen-l'Aumône (95)</div>
+        <div class="item item-divider item-positive">Val-d'Oise - Saint-Ouen-l'Aumône (95)</div>
       </div>
       <div style="" class="list card">
-        <div class="item item-divider">recherche remplacant(e) pour aout</div>
+        <div class="item item-divider item-positive">recherche remplacant(e) pour aout</div>
         <div class="item item-body">
           <div style=" text-align: center;" >
             <img src="img/fonsegrive.png" width="100%" alt="" />
@@ -46,7 +54,7 @@
               Logiciel Chorus. Consultations sans rdv du lundi au vendredi de 10h à12h et de 16h à 19h. Patiente tres variée...</p>
             </div>
           </div>
-          <div class="item item-divider">Quint-Fonsegrives (31)</div>
+          <div class="item item-divider item-positive">Quint-Fonsegrives (31)</div>
         </div>
       </ion-content>
     </ion-view>
