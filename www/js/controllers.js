@@ -94,15 +94,3 @@ angular.module('app.controllers', [])
         region : "Bourgogne 24 ",
       }] ;
   })
-
-
-
-   .controller('MainCtrl',['$scope',
-    function($scope) {
-        $scope.map = L.map('map').setView([37.8, -96], 0);
-        L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
-          attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        subdomains: '1234'
-    }).addTo($scope.map);
-
-    }]);
